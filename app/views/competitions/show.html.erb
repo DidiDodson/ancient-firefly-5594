@@ -8,6 +8,9 @@ Sport: <%= "#{@competition.sport}" %></h3>
   Team Hometown:  <%= team.hometown %>
 <% end %>
 
+Average Age of all players: <%= @competition.av_age %>
+
+
 <hr>
 Add Team to Competition:
 <%= form_with url: "/competitions/#{@competition.id}/teams", method: :post, local: true do |f| %>

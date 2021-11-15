@@ -31,9 +31,6 @@ RSpec.describe "the Teams index page" do
         expect(page).to have_content(@team3.hometown)
       end
     end
-
-
-
   end
 
   it 'shows the names and ages of all team players' do

@@ -13,6 +13,7 @@ RSpec.describe "the Competition show page" do
     @player2 = @team2.players.create!(name: "Lilly Tanaka", age: 16)
     @player3 = @team2.players.create!(name: "Robert Balastrado", age: 16)
     @player4 = @team3.players.create!(name: "Teruo Hamachi", age: 9)
+    @player5 = @team4.players.create!(name: "Teruo Hamachi", age: 9)
 
     visit competition_path(@competition)
   end
@@ -29,7 +30,8 @@ RSpec.describe "the Competition show page" do
     expect(page).to have_content(@team3.hometown)
   end
 
-  xit 'shows average player age' do
+  it 'shows average player age' do
+    expect(page).to have_content('Average Age of all players:')
   end
 
   it 'has form to add team to competition' do
